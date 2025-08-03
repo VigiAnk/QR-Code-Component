@@ -20,26 +20,37 @@
     /* html root font size */
     html {
       font-size: 16px;
+      height: 100%;
     }
 
     /* body default background color */
     body {
+      min-height: 100vh;
       background-color: hsl(212, 45%, 89%);
+      margin: 0;
       display: grid;
+      /* define the specific grid area */
+      grid-template-areas: "main";
+      /* one single row taking up the remaining spaces */
+      grid-template-rows: 1fr;
+      /* one single column taking up the width */
       grid-template-columns: 1fr;
-      place-items: center;
     }
 
     /* container */
     .container {
       width: 20rem;
       padding: 1rem 1rem 2.5rem 1rem;
-      margin: auto;
       background-color: hsl(0, 0%, 100%);
       border-radius: 1.25rem;
 
       /* set display to Grid */
       display: grid;
+      /* designate it to the "main" area */
+      grid-template-areas: "main";
+      /* centered in the "main" area */
+      place-self: center;
+      /* the container also has just one column */
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
