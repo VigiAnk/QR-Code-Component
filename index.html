@@ -6,10 +6,86 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <!-- imported from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Regular 400 Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <!-- Bold 700 Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+  
   <title>Frontend Mentor | QR code component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    /* html root font size */
+    html {
+      font-size: 16px;
+    }
+
+    /* body default background color */
+    body {
+      background-color: hsl(212, 45%, 89%);
+    }
+
+    /* container */
+    .container {
+      width: 20rem;
+      padding: 1rem 1rem 2.5rem 1rem;
+      margin: auto;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 1.25rem;
+
+      /* set display to Grid */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    /* general gridboxes */
+    .grid-box {
+      width: 100%;
+      /* ensure padding/border don't overflow */
+      box-sizing: border-box;
+    }
+
+    /* gridbox-1  */
+    .box1 {
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0.625rem;
+      }
+    }
+
+    /* gridbox-2 */
+    .box2 {
+      padding: 0 1rem;
+      /* set display to Grid too */
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+      /* text title */
+      & .title {
+        color: hsl(218, 44%, 22%);
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      }
+
+      /* text description */
+      & .description {
+        color: hsl(216, 15%, 48%);
+        font-family: "Outfit", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+      }
+    }
+
+    /* temporarily reserves the attribution */
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -19,7 +95,7 @@
 
     <!-- places the QR code image -->
     <div class="grid-box box1">
-      <img src="" alt="">
+      <img src="./images/image-qr-code.png" alt="qr-code-image">
     </div>
 
     <!-- places the text -->
@@ -41,7 +117,7 @@
         Coded by <a href="#">FrancisLIU</a>.
       </div>
     </footer>
-    
+
   </div>
 </body>
 </html>
